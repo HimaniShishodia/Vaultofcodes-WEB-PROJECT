@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VaultofCodes — Learn like an engineer. Build like a founder.</title>
+<meta name="description" content="VaultofCodes is a technology company teaching real engineering skills and building real software — programs, internships, workshops, and a growing suite of SaaS products." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#" class="brand">
+      <span class="brand__bracket">&lt;</span>VaultofCodes<span class="brand__bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#what-we-do">Home</a>
+      <a href="#programs">Programs</a>
+      <a href="#software">Software</a>
+      <a href="#why">About</a>
+      <a href="#community">Careers</a>
+      <a href="#stats">Free Tests</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="#" class="btn btn--ghost-light">Login</a>
+      <a href="#programs" class="btn btn--signal">Explore Programs</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#what-we-do">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#software">Software</a>
+    <a href="#why">About</a>
+    <a href="#community">Careers</a>
+    <a href="#stats">Free Tests</a>
+    <div class="mobile-menu__actions">
+      <a href="#" class="btn btn--ghost-light btn--full">Login</a>
+      <a href="#programs" class="btn btn--signal btn--full">Explore Programs</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Technology education &amp; software, under one roof</p>
+      <h1 class="hero__headline">
+        Learn like an <span class="text-mint">engineer.</span><br />
+        Build like a <span class="text-violet">founder.</span>
+      </h1>
+      <p class="hero__sub">
+        VaultofCodes trains people to write real code through project-based programs,
+        internships and workshops — then puts that same engineering energy into
+        software products people actually use.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#programs" class="btn btn--signal btn--lg magnetic">Explore Programs</a>
+        <a href="#software" class="btn btn--outline-light btn--lg magnetic">Explore Software</a>
+      </div>
+
+      <dl class="hero__stats">
+        <div><dt>50K+</dt><dd>Learners</dd></div>
+        <div><dt>120+</dt><dd>Programs</dd></div>
+        <div><dt>12K+</dt><dd>Projects shipped</dd></div>
+        <div><dt>60+</dt><dd>Live workshops</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero__panel reveal" aria-hidden="true">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--yellow"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+          <span class="terminal__title">vault@codes:~</span>
+        </div>
+        <pre class="terminal__body"><code id="terminalCode"></code><span class="terminal__cursor" id="terminalCursor">&#9608;</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT WE DO ===================== -->
+<section class="section" id="what-we-do">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>Two engines. One company.</h2>
+      <p>VaultofCodes runs on two halves that feed each other — people learning to build, and software we're building ourselves.</p>
+    </div>
+
+    <div class="split">
+      <article class="split__panel split__panel--mint reveal">
+        <span class="split__tag">Learn</span>
+        <h3>Vault Academy</h3>
+        <p>Practical, project-based courses, cohort training, internships and free workshops — built around shipping real work, not watching lecture videos.</p>
+        <ul class="split__list">
+          <li>Cohort-based live programs</li>
+          <li>Paid &amp; unpaid internship tracks</li>
+          <li>Free weekend workshops</li>
+        </ul>
+        <a href="#programs" class="split__link">See programs →</a>
+      </article>
+
+      <article class="split__panel split__panel--violet reveal">
+        <span class="split__tag">Build</span>
+        <h3>Vault Labs</h3>
+        <p>Our in-house software and SaaS products — solving the same real-world problems our students are learning to solve, in production.</p>
+        <ul class="split__list">
+          <li>Credential &amp; hiring infrastructure</li>
+          <li>Career intelligence tools</li>
+          <li>Cloud dev environments</li>
+        </ul>
+        <a href="#software" class="split__link">See software →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED PROGRAMS ===================== -->
+<section class="section section--alt" id="programs">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>Featured programs</h2>
+      <p>A sample of what people are building inside VaultofCodes right now.</p>
+    </div>
+
+    <div class="program-grid" id="programGrid">
+      <!-- Cards are rendered by script.js from a data array -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOFTWARE & SAAS ===================== -->
+<section class="section" id="software">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>The Vault software ecosystem</h2>
+      <p>Real fictional products, built the way our own students are taught to build.</p>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Cards are rendered by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY VAULTOFCODES ===================== -->
+<section class="section section--alt" id="why">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>Why people choose VaultofCodes</h2>
+      <p>We built this the way we wished technology education worked when we were learning.</p>
+    </div>
+
+    <div class="why-grid" id="whyGrid">
+      <!-- Cards are rendered by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats-band" id="stats">
+  <div class="section__inner stats-band__inner">
+    <div class="stat-block">
+      <span class="stat-block__num" data-count="50000" data-suffix="+">0</span>
+      <span class="stat-block__label">Students trained</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block__num" data-count="120" data-suffix="+">0</span>
+      <span class="stat-block__label">Programs &amp; courses</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block__num" data-count="12000" data-suffix="+">0</span>
+      <span class="stat-block__label">Projects shipped</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block__num" data-count="60" data-suffix="+">0</span>
+      <span class="stat-block__label">Live workshops</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section" id="how">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>How it works</h2>
+      <p>The same path, whether you're starting from zero or shipping your tenth project.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="steps__item reveal">
+        <span class="steps__num">01</span>
+        <h3>Discover</h3>
+        <p>Take a free skill test, browse programs, and figure out where you actually stand.</p>
+      </li>
+      <li class="steps__item reveal">
+        <span class="steps__num">02</span>
+        <h3>Learn</h3>
+        <p>Join a cohort, follow a structured curriculum, and get unblocked by real mentors.</p>
+      </li>
+      <li class="steps__item reveal">
+        <span class="steps__num">03</span>
+        <h3>Build</h3>
+        <p>Ship projects that go in your portfolio, not a certificate that goes in a drawer.</p>
+      </li>
+      <li class="steps__item reveal">
+        <span class="steps__num">04</span>
+        <h3>Launch</h3>
+        <p>Move into internships, jobs, or your own product — with VaultHire and VaultCareer behind you.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== COMMUNITY ===================== -->
+<section class="section section--alt" id="community">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <h2>Built by a community that ships</h2>
+      <p><span class="rating">4.9/5</span> average rating across 8,000+ student reviews.</p>
+    </div>
+  </div>
+
+  <div class="marquee" role="region" aria-label="Student testimonials">
+    <div class="marquee__track" id="marqueeTrack">
+      <!-- Testimonial cards are duplicated by script.js for a seamless loop -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+  <div class="final-cta__glow" aria-hidden="true"></div>
+  <div class="section__inner final-cta__inner">
+    <h2>Ready to build your future in tech?</h2>
+    <p>Start with a free program, or see what we're building at Vault Labs.</p>
+    <div class="final-cta__ctas">
+      <a href="#programs" class="btn btn--signal btn--lg magnetic">Explore Programs</a>
+      <a href="#software" class="btn btn--outline-light btn--lg magnetic">Explore Software</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="section__inner footer__grid">
+    <div class="footer__brand">
+      <a href="#" class="brand brand--footer">
+        <span class="brand__bracket">&lt;</span>VaultofCodes<span class="brand__bracket">/&gt;</span>
+      </a>
+      <p>A technology education and software company — teaching people to build, then building alongside them.</p>
+      <div class="footer__social" aria-label="Social links">
+        <a href="#" aria-label="VaultofCodes on X">𝕏</a>
+        <a href="#" aria-label="VaultofCodes on LinkedIn">in</a>
+        <a href="#" aria-label="VaultofCodes on GitHub">GH</a>
+        <a href="#" aria-label="VaultofCodes on YouTube">YT</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="#">Web Development</a>
+      <a href="#">Python</a>
+      <a href="#">AI &amp; Prompt Engineering</a>
+      <a href="#">Cybersecurity</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Software</h4>
+      <a href="#">VaultVerify</a>
+      <a href="#">VaultCareer</a>
+      <a href="#">VaultHire</a>
+      <a href="#">VaultCompiler</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Resources</h4>
+      <a href="#">Free skill tests</a>
+      <a href="#">Documentation</a>
+      <a href="#">Community</a>
+      <a href="#">Help center</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom section__inner">
+    <p>© <span id="year"></span> VaultofCodes. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
